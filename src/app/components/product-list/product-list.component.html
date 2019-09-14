@@ -1,0 +1,14 @@
+<h2>Products</h2>
+
+<div>
+    <div *ngFor="let product of products">
+        <a [title]="product.name + '---'" count='12+1' [id]="product.price.toString()+'--'">{{product.name}}</a>
+        <br/>
+        <a title="{{product.name}} -- {{product.price}}">{{product.name}}----{{product.price}}</a>
+    </div>
+</div>
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->
