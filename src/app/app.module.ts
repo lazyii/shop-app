@@ -7,9 +7,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { APP_BASE_HREF } from '@angular/common';
 
 //angular material module import
-import {AccordionModule} from 'primeng/accordion';
-import {InputTextModule} from 'primeng/inputtext';
-import {EditorModule} from 'primeng/editor';
+import { MatInputModule, MatButtonModule} from '@angular/material';
+
+
 //Alternatively, you can disable animations by importing NoopAnimationsModule.
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -29,7 +29,7 @@ const routes: Routes = [
   { path: '**', component: Page404Component },
 ];
 const materialModules = [
-  AccordionModule, InputTextModule, EditorModule
+  MatInputModule, MatButtonModule
 ];
 
 @NgModule({
