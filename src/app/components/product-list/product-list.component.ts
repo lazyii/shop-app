@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 
 import { products } from '../../data/products';
 
+
 //service
-import {} from '../../service/test-service.service'
+import {} from '../../service/test.service'
 
 @Component({
   selector: 'app-product-list',

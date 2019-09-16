@@ -7,7 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { APP_BASE_HREF } from '@angular/common';
 
 //angular material module import
-import { MatInputModule, MatButtonModule} from '@angular/material';
+import { MatInputModule, MatButtonModule, MatToolbarModule, MatIconModule, MatMenuModule, MatCardModule, MatProgressSpinnerModule } from '@angular/material';
 
 
 //Alternatively, you can disable animations by importing NoopAnimationsModule.
@@ -24,19 +24,20 @@ import { LoginComponent } from './components/login/login.component';
 //must start with '/'
 const baseUrl = '/';
 const routes: Routes = [
-  { path: '', component: LoginComponent },
+  { path: '', pathMatch: 'full', redirectTo: 'login' },
   { path: 'login', component: LoginComponent },
+  { path: 'products', component: ProductListComponent },
   { path: '**', component: Page404Component },
 ];
 const materialModules = [
-  MatInputModule, MatButtonModule
+  MatInputModule, MatButtonModule, MatToolbarModule, MatIconModule, MatMenuModule, MatCardModule, MatProgressSpinnerModule
 ];
 
 @NgModule({
-  providers: [{
+  providers: [ {
     provide: APP_BASE_HREF,
     useValue: baseUrl
-  }],
+  } ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -55,7 +56,7 @@ const materialModules = [
     Page404Component,
     LoginComponent
   ],
-  bootstrap: [AppRootComponent],
+  bootstrap: [ AppRootComponent ],
   exports: []
 })
 export class AppModule { }

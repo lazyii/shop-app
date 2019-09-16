@@ -4,3 +4,20 @@
 // pink-bluegrey.css
 // purple-green.css
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "quill/dist/quill.core.css";
+@import "quill/dist/quill.snow.css";
+
+
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body, html { font-size: 100%; 	padding: 0; margin: 0;}
+html {
+    position: relative;
+    background: #FF4081;
+    font-family: 'Roboto', sans-serif;
+}
